@@ -1,0 +1,38 @@
+{
+    "name": "usesgraphcrt/yii2-check-print-module",
+    "description": "Модуль печати чеков и работы со сменой для ккм",
+    "keywords": ["yii2", "yii 2", "application", "kkm", "check print", "module", "usesgraphcrt"],
+    "homepage": "https://github.com/usesgraphcrt/yii2-check-print-module",
+    "type": "yii2-extension",
+    "license": "BSD-3-Clause",
+    "support": {
+        "source": "https://github.com/usesgraphcrt/yii2-check-print-module"
+    },
+    "authors": [
+        {
+            "name": "usesgraphcrt",
+            "email": "usesgraphcrt@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.5.0",
+        "yiisoft/yii2": "*",
+        "yiisoft/yii2-bootstrap": "*"
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "*",
+        "yiisoft/yii2-gii": "*"
+    },
+    "config": {
+        "process-timeout": 1800
+    },
+    "autoload": {
+        "psr-4": {
+            "usesgraphcrt\\ckeckPrint\\": ""
+        }
+    },
+    "extra": {
+        "bootstrap": "usesgraphcrt\\checkPrint\\Bootstrap"
+    }
+}
