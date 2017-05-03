@@ -38,6 +38,7 @@ php composer.phar require --prefer-dist usesgraphcrt/yii2-check-print-module "*"
 usesgraphcrt\check-print\PrintAsset::register($this);
 ```
 
+## AssetBundle
 event-handler.js слушает два события:
 successOrderCreate - печать чека после успешного создания заказа. Для корректной работы необходимо создать триггер для этого события.
 ```javaScript
