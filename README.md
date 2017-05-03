@@ -42,7 +42,7 @@ usesgraphcrt\check-print\PrintAsset::register($this);
 event-handler.js слушает два события:
 successOrderCreate - печать чека после успешного создания заказа. Для корректной работы необходимо создать триггер для этого события.
 ```javaScript
-$(document).on('succesOrderCreate', function() {
+$(document).on('successOrderCreate', function() {
         ...
 });
 ```
