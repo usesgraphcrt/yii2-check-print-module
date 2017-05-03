@@ -1,7 +1,8 @@
 <?php
-namespace usesgraphcrt\checkPrint\assets;
+namespace usesgraphcrt\checkprint\assets;
 
 use yii\web\AssetBundle;
+use yii\helpers\Url;
 
 class PrintAsset extends AssetBundle
 {
@@ -16,6 +17,9 @@ class PrintAsset extends AssetBundle
 
     public function init()
     {
+        $this->getView()->registerJs('usesgraphcrt.checkprint.urlToPrint = "'.Url::toRoute(['/checkprint/kkm/print']).'";');
+        $this->getView()->registerJs('usesgraphcrt.checkprint.urlToOpenSession = "'.Url::toRoute(['/checkprint/kkm/open-session']).'";');
+        $this->getView()->registerJs('usesgraphcrt.checkprint.urlToCloseSession = "'.Url::toRoute(['/checkprint/kkm/close-session']).'";');
         $this->sourcePath = __DIR__ . '/../web';
         parent::init();
     }
