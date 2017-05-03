@@ -37,3 +37,24 @@ php composer.phar require --prefer-dist usesgraphcrt/yii2-check-print-module "*"
 ```php
 usesgraphcrt\check-print\PrintAsset::register($this);
 ```
+
+event-handler.js слушает два события:
+successOrderCreate - печать чека после успешного создания заказа. Для корректной работы необходимо создать триггер для этого события.
+```javaScript
+$(document).on('succesOrderCreate', function() {
+        ...
+});
+```
+Для работы со сменой ккм (открытие/закрытие) используется событие click по элементу с data-role=main-session,
+а разделение на открытие/закрытие реализовано с помощью класса worksess-stop / worksess-start:
+```javaScript
+$(document).on('click','[data-role=main-session]', function() {
+    var self = $(this),
+        host = window.location.hostname;
+    if (self.hasClass('worksess-stop')) {
+        ...
+    } else {
+       ...
+    }
+});
+```
