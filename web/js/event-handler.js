@@ -1,6 +1,6 @@
 
 
-$(document).on('clearServiceOrder', function() {
+$(document).on('successOrderCreate', function() {
     var host = window.location.hostname;
     window.open(host+'/check-print/kkm/print','name','height=1,width=1');
 });
