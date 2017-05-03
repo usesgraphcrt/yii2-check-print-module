@@ -1,6 +1,6 @@
 <?php
 
-namespace usesgraphcrt\checkPrint\controllers;
+namespace usesgraphcrt\checkprint\controllers;
 
 use yii\web\Controller;
 use yii\filters\AccessControl;
@@ -61,29 +61,29 @@ class KkmController extends Controller
         $this->enableCsrfValidation = false;
 
         $print = '
-					ECR = new ActiveXObject("AddIn.FPrnM45");
+                ECR = new ActiveXObject("AddIn.FPrnM45");
 
-					ECR.SlipDocCharLineLength = 32;
-					ECR.SlipDocTopMargin = 0;
-					ECR.SlipDocLeftMargin = 1;
-					ECR.SlipDocOrientation = 0;
+                ECR.SlipDocCharLineLength = 32;
+                ECR.SlipDocTopMargin = 0;
+                ECR.SlipDocLeftMargin = 1;
+                ECR.SlipDocOrientation = 0;
 
-					ECR.DeviceEnabled = 1;
+                ECR.DeviceEnabled = 1;
 
-					if (ECR.GetStatus()){
-						alert("Не получилось соединиться с ККМ!");
-						ECR.DeviceEnabled = 0;
-						window.close(); 
-					} else {
-						ECR.Password = 30;
-						ECR.Mode = 3;
-						ECR.SetMode();
-						ECR.ReportType = 1;
-						ECR.Report();
-						ECR.Beep();
-						ECR.DeviceEnabled = 0;
-						window.close(); 
-					};';
+                if (ECR.GetStatus()){
+                    alert("Не получилось соединиться с ККМ!");
+                    ECR.DeviceEnabled = 0;
+                    window.close(); 
+                } else {
+                    ECR.Password = 30;
+                    ECR.Mode = 3;
+                    ECR.SetMode();
+                    ECR.ReportType = 1;
+                    ECR.Report();
+                    ECR.Beep();
+                    ECR.DeviceEnabled = 0;
+                    window.close(); 
+                };';
 
         return '<script>'.$print.'</script>';
 
