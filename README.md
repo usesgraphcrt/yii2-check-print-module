@@ -22,7 +22,7 @@ php composer.phar require --prefer-dist usesgraphcrt/yii2-check-print-module "*"
 ```php
 'modules' => [
         ...
-        'check-print' => [
+        'checkprint' => [
             'class' => \usesgraphcrt\checkPrint\Module::className(),
             'orderModel' => 'namespace модели заказов',
             'orderElementModel' => 'namespace модели элементов заказа',
@@ -35,7 +35,7 @@ php composer.phar require --prefer-dist usesgraphcrt/yii2-check-print-module "*"
 ```
 Для того, чтобы работала печать чека, необходимо зарегестрировать AssetBundle модуля в Вашем layout'e добавив строку:
 ```php
-usesgraphcrt\check-print\PrintAsset::register($this);
+usesgraphcrt\checkprint\PrintAsset::register($this);
 ```
 
 ## AssetBundle
